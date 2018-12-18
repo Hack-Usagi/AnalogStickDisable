@@ -8,7 +8,7 @@ Plug-in to completely disable PSVita's analog stick
 <a href="https://github.com/Hack-Usagi" target=blank>Hack-Usagi</a>
  - idea , developed
 <br>
-<a href="https://github.com/Princess-of-Sleeping" target=blank>Pricess-of-Sleeping</a>
+<a href="https://github.com/Princess-of-Sleeping" target=blank>Princess-of-Sleeping</a>
  - Advice on development , Beta Test
 
 ### Installation
