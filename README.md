@@ -1,5 +1,5 @@
 # AnalogStickDisable
-Plug-in to completely disable PSVita's analog stick
+Plug-in for disabling PSVita's analog stick
 <p>Build by 
 <a href="https://github.com/Hack-Usagi" target=blank>Hack-Usagi</a>
  and 
