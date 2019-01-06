@@ -23,5 +23,5 @@ ux0:tai/AnalogStickDisable.skprx
 #### Ver1.0
 Release
 #### Ver1.1
-Patched all known control functions.
+Patched all known control functions.<br>
 Two versions added so that only one analog stick can be patched.
