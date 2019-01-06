@@ -1,4 +1,4 @@
-/* AnalogStickDisable
+/* AnalogStickDisable Ver1.1
 
  Hack-Usagi(https://github.com/Hack-Usagi)
   idea
@@ -51,7 +51,12 @@ CTRL_PATCH_FUNC(sceCtrlReadBufferPositiveExt)
 CTRL_PATCH_FUNC(sceCtrlPeekBufferPositiveExt2)
 CTRL_PATCH_FUNC(sceCtrlReadBufferPositiveExt2)
 
-static SceUID uid[0x8];
+CTRL_PATCH_FUNC(sceCtrlPeekBufferNegative)
+CTRL_PATCH_FUNC(sceCtrlReadBufferNegative)
+CTRL_PATCH_FUNC(sceCtrlPeekBufferNegative2)
+CTRL_PATCH_FUNC(sceCtrlReadBufferNegative2)
+
+static SceUID uid[0xC];
 
 void _start() __attribute__ ((weak, alias ("module_start")));
 int module_start(SceSize argc, const void *args){
@@ -68,6 +73,12 @@ int module_start(SceSize argc, const void *args){
 	uid[0x6] = HookExport("SceCtrl", 0xD197E3C7, 0xE2D99296, sceCtrlReadBufferPositiveExt);
 	uid[0x7] = HookExport("SceCtrl", 0xD197E3C7, 0xA7178860, sceCtrlReadBufferPositiveExt2);
 
+	uid[0x8] = HookExport("SceCtrl", 0xD197E3C7, 0x104ED1A7, sceCtrlPeekBufferNegative);
+	uid[0x9] = HookExport("SceCtrl", 0xD197E3C7, 0x15F96FB0, sceCtrlReadBufferNegative);
+
+	uid[0xA] = HookExport("SceCtrl", 0xD197E3C7, 0x81A89660, sceCtrlPeekBufferNegative2);
+	uid[0xB] = HookExport("SceCtrl", 0xD197E3C7, 0x27A0C5FB, sceCtrlReadBufferNegative2);
+
 	return SCE_KERNEL_START_SUCCESS;
 }
 
@@ -81,6 +92,10 @@ int module_stop(SceSize argc, const void *args){
 	HookRelease(uid[0x5], sceCtrlReadBufferPositiveExt);
 	HookRelease(uid[0x6], sceCtrlPeekBufferPositiveExt2);
 	HookRelease(uid[0x7], sceCtrlReadBufferPositiveExt2);
+	HookRelease(uid[0x8], sceCtrlPeekBufferNegative);
+	HookRelease(uid[0x9], sceCtrlReadBufferNegative);
+	HookRelease(uid[0xA], sceCtrlPeekBufferNegative2);
+	HookRelease(uid[0xB], sceCtrlReadBufferNegative2);
 
 	return SCE_KERNEL_STOP_SUCCESS;
 }
