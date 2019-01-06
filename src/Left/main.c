@@ -1,10 +1,13 @@
 /* AnalogStickDisable Ver1.1 (Left)
+
  Hack-Usagi(https://github.com/Hack-Usagi)
   idea
   developed
+
  Princess-of-Sleeping (https://github.com/Princess-of-Sleeping)
   Advice on development
   Beta Test
+
 */
 
 #include <psp2kern/kernel/modulemgr.h>
