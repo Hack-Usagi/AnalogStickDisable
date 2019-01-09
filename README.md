@@ -1,5 +1,6 @@
 # AnalogStickDisable
-Plug-in for disabling PSVita's analog stick and more
+Plug-in for disabling PSVita's analog stick and more</p>
+__It does not work properly on some applications!! (PCSG00610 etc)__
 <p>Build by 
 <a href="https://github.com/Hack-Usagi" target=blank>Hack-Usagi</a>
  and 
@@ -24,6 +25,19 @@ Add this plugin under `*KERNEL` section in `ux0:tai/config.txt`
 *KERNEL
 ux0:tai/AnalogStickDisable.skprx
 ```
+### Released items
+<p>AnalogStickDisable.skprx<br>
+ -Disable Vita's left and right analog sticks.
+<p>AnalogStickDisable_LeftOnly.skprx<br>
+ -Vita Disable left analog stick.
+<p>AnalogStickDisable_RightOnly.skprx<br>
+ -Vita Disable right analog stick.
+<p>AnalogStickDisable_LeftToRight.skprx<br>
+ -Assign Vita's left stick operation to right stick.
+<p>AnalogStickDisable_RightToLeft.skprx<br>
+ -Assign Vita's Right stick operation to Left stick.
+<p>AnalogStickDisable_SwapLeftAndRight.skprx<br>
+ -Swap the operation of Vita's left and right analog graphics.
 
 #### Ver1.0
 Release
